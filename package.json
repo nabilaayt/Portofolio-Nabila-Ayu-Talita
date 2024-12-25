@@ -4,13 +4,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind": "npx tailwindcss -i ./src/style/input.css -o ./public/css/style.css --watch"
+    "tailwind": "npx tailwindcss -i ./src/style/input.css -o ./public/css/style.css --watch",
+    "build": "npx tailwindcss -i ./src/style/input.css -o ./public/css/style.css --minify",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "gh-pages": "^6.2.0",
     "tailwindcss": "^3.4.17"
   },
   "homepage": "https://nabilaayt.github.io/Portofolio-Nabila-Ayu-Talita"
